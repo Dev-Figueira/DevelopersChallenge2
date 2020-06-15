@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "Envio dos Arquivos";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post" enctype="multipart/form-data" asp-controller="UploadFiles" asp-action="Index">
+    <div class="form-group">
+            <p>
+                Carregue um ou mais arquivos usando este formulário:
+            </p>
+            <input type="file" name="files" accept="arquivo/ofx" multiple>
+    </div>
+    <div class="form-group">
+            <input type="submit" value="Enviar">
+    </div>
+</form>

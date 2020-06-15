@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Nibo.App.ViewModels.TransactionViewModel>
+
+@{
+    ViewData["Title"] = "Relátorio:";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Data da Transação</th>
+            <th scope="col">Valor da Trasação</th>
+            <th scope="col">Tipo de Transação</th>
+            <th scope="col">Descrição da Transação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td scope="row">@item.DTPOSTED</td>
+                <td scope="row">@item.MEMO</td>
+                <td scope="row">@item.TRNTYPE</td>
+                <td scope="row">@item.TRNAMT</td>
+            </tr>
+        }
+    </tbody>
+</table>
